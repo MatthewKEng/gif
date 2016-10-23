@@ -1,0 +1,21 @@
+
+<div id="all">
+  <div id="ralph">
+    <button ng-click="gif.getRandomGif()">Random</button>
+
+    <input type="text" ng-model="gif.search">
+    <button ng-click="gif.searchForGif(gif.search)">Search</button>
+  </div>
+
+  <div id="george">
+    <img ng-src="{{gif.randomGifURL}}"/>
+
+    <label>
+      Why do you like this GIF?
+      <input type="text" ng-model="gif.comment">
+    </label>
+
+    <button ng-click="gif.addFav(gif.comment, gif.randomGifURL)">Add this GIF as a favorite!</button>
+    <img ng-repeat="movingPicture in gif.searchedGifs" ng-src="{{movingPicture.images.fixed_height.url}}"/>
+  </div>
+</div>

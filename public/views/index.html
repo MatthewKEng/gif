@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="gifApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Going GIF Crazy!!!</title>
+
+    <link rel="stylesheet" href="views/style.css">
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+
+    <script src="scripts/gif.module.js" charset="utf-8"></script>
+    <script src="scripts/gif.config.js" charset="utf-8"></script>
+    <script src="scripts/gif.controller.js" charset="utf-8"></script>
+    <script src="scripts/gif.service.js" charset="utf-8"></script>
+
+    <base href="/" />
+  </head>
+  <body  ng-app="gifApp" ng-controller="GifController as gif">
+    <header>
+      <h1>Going GIF Crazy!!!</h1>
+      <a href="/home">Home</a>
+      <a href="/fav">Favorites</a>
+    </header>
+
+    <ng-view>
+
+    </ng-view>
+  </body>
+</html>
